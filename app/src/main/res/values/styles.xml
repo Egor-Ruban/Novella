@@ -12,6 +12,8 @@
     </style>
 
     <style name="title" parent="text">
+        <item name="fontFamily">@font/quattrocento_sans</item>
+        <item name="android:fontFamily">@font/quattrocento_sans</item>
         <item name="android:background">@color/light</item>
         <item name="android:textSize">36sp</item>
     </style>
