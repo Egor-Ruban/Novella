@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Novella</string>
     <string name="meet_kir">Привет! Меня зовут Кирюша. А тебя?</string>
+    <string name="end_title">Спасибо, что поиграли!</string>
+    <string name="start_title">Моя визуальная новелла</string>
+    <string name="end_continue">Пройти еще раз</string>
+    <string name="start_continue">Начать</string>
 </resources>
