@@ -5,6 +5,9 @@
     <string name="start_title">Моя визуальная новелла</string>
     <string name="end_continue">Пройти еще раз</string>
     <string name="start_continue">Начать</string>
-    <string name="intro_et_hint">Введите свое имя...</string>
+    <string name="intro_et_hint">Введите свое имя…</string>
     <string name="intro_continue">Подтвердить</string>
+    <string name="value_missed">Value Missed</string>
+    <string name="context_value_id">id</string> <!-- чую не тут их надо хранить-->
+    <string name="context_value_username">username</string> <!-- чую не тут их надо хранить-->
 </resources>

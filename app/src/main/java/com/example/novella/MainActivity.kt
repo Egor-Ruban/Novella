@@ -5,8 +5,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.novella.databinding.EdgeScreenBinding
 
-private lateinit var binding : EdgeScreenBinding
+
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding : EdgeScreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = EdgeScreenBinding.inflate(layoutInflater)

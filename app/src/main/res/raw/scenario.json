@@ -23,6 +23,7 @@
   {
     "id" : 4,
     "title" : "Может, пойдем домой?..",
+    "showKir": false,
     "background": "background_4",
     "answers" :
     [
@@ -39,6 +40,7 @@
   {
     "id" : 5,
     "title" : "Как уютно... Но уже темнеет.",
+    "showKir": false,
     "background": "background_5",
     "answers" : [{
       "nextID" : 7,
@@ -53,6 +55,7 @@
   {
     "id" : 6,
     "title" : "Тебе грустно... Пойдем домой?",
+    "showKir": false,
     "background": "background_6",
     "answers" : [{
       "nextID" : 7,
@@ -67,6 +70,7 @@
   {
     "id" : 7,
     "title" : "Как тебе фильм?",
+    "showKir": false,
     "background": "background_7_9_10",
     "answers" : [{
       "nextID" : 9,
@@ -81,6 +85,7 @@
   {
     "id" : 8,
     "title" : "Получается очень красиво!",
+    "showKir": false,
     "background": "background_8",
     "answers" : [{
       "nextID" : 7,
@@ -95,24 +100,27 @@
   {
     "id" : 9,
     "title" : "Отлично! А теперь пора спать...",
+    "showKir": false,
     "background": "background_7_9_10",
     "answers" : [{
-      "nextID" : 14,
+      "nextID" : -1,
       "text" : "Да, уже поздно..."
     }]
   },
   {
     "id" : 10,
     "title" : "Жаль... Тогда пойдем спать?",
+    "showKir": false,
     "background": "background_7_9_10",
     "answers" : [{
-      "nextID" : 14,
+      "nextID" : -1,
       "text" : "Да, уже поздно..."
     }]
   },
   {
     "id" : 11,
     "title" : "Мне нравится твой костюм.",
+    "showKir": false,
     "background": "background_11_12_13",
     "answers" : [{
       "nextID" : 12,
@@ -127,28 +135,21 @@
   {
     "id" : 12,
     "title" : "Спасибо! Ну, пойдем спать?",
+    "showKir": false,
     "background": "background_11_12_13",
     "answers" : [{
-      "nextID" : 14,
+      "nextID" : -1,
       "text" : "Да, уже поздно..."
     }]
   },
   {
     "id" : 13,
     "title" : "Ничего, я не в обиде. Пойдем спать?",
+    "showKir": false,
     "background": "background_11_12_13",
     "answers" : [{
-      "nextID" : 14,
+      "nextID" : -1,
       "text" : "Да, уже поздно..."
-    }
-    ]
-  },
-  {
-    "id" : 14,
-    "title" : "the end",
-    "answers" : [{
-      "nextID" : 14,
-      "text" : "the end"
     }
     ]
   }

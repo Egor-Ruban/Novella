@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/iv_story_background"
+        android:id="@+id/ivIntroBackground"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <ImageView
-        android:id="@+id/iv_story_kir"
+        android:id="@+id/ivIntroKir"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scaleType="fitStart"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_story_title"
+        android:id="@+id/tvIntroTitle"
         style="@style/darkText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toTopOf="@id/guideline" />
 
     <EditText
-        android:id="@+id/et_name"
+        android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -61,16 +61,17 @@
         android:background="@color/gray"
         android:hint="@string/intro_et_hint"
         android:lines="1"
+        android:inputType="textPersonName"
         android:textSize="18sp"
         android:textColorHint="@color/hint_black"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@id/tv_intro_continue"
+        app:layout_constraintBottom_toTopOf="@id/tvIntroContinue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_story_title" />
+        app:layout_constraintTop_toBottomOf="@id/tvIntroTitle" />
 
     <TextView
-        android:id="@+id/tv_intro_continue"
+        android:id="@+id/tvIntroContinue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/darkText"
@@ -79,6 +80,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_name" />
+        app:layout_constraintTop_toBottomOf="@id/etName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

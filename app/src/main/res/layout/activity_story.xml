@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/iv_story_background"
+        android:id="@+id/ivStoryBackground"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <ImageView
-        android:id="@+id/iv_story_kir"
+        android:id="@+id/ivStoryKir"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scaleType="fitStart"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_story_title"
+        android:id="@+id/tvStoryTitle"
         style="@style/darkText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,36 +50,33 @@
         app:layout_constraintTop_toTopOf="@id/guideline" />
 
     <TextView
-        android:id="@+id/first_option"
+        android:id="@+id/firstOption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/lightText"
-        android:text="fsdfds"
         android:visibility="invisible"
-        app:layout_constraintTop_toBottomOf="@id/tv_story_title"
+        app:layout_constraintTop_toBottomOf="@id/tvStoryTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/second_option"
+        app:layout_constraintBottom_toTopOf="@id/secondOption"
         />
     <TextView
-        android:id="@+id/second_option"
+        android:id="@+id/secondOption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/lightText"
-        android:text="fsdfds"
-        app:layout_constraintTop_toBottomOf="@id/first_option"
+        app:layout_constraintTop_toBottomOf="@id/firstOption"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/third_option"
+        app:layout_constraintBottom_toTopOf="@+id/thirdOption"
         />
     <TextView
-        android:id="@+id/third_option"
+        android:id="@+id/thirdOption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/lightText"
-        android:text="fsdfds"
         android:visibility="invisible"
-        app:layout_constraintTop_toBottomOf="@id/second_option"
+        app:layout_constraintTop_toBottomOf="@id/secondOption"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
