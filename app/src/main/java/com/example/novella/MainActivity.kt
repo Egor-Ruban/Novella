@@ -12,8 +12,9 @@ class MainActivity : AppCompatActivity() {
         binding = StartScreenBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
         binding.tvBtnStart.setOnClickListener {
-            val intent = Intent(this, Introduction::class.java)
+            val intent = Intent(this, IntroActivity::class.java)
             startActivity(intent)
         }
     }
