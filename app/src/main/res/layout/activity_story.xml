@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_story_background"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -16,11 +16,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <ImageView
-        android:id="@+id/im_kir"
+        android:id="@+id/iv_story_kir"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scaleType="fitStart"
         android:src="@drawable/kir"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_kir"
+        android:id="@+id/tv_story_title"
         style="@style/darkText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +56,7 @@
         style="@style/lightText"
         android:text="fsdfds"
         android:visibility="invisible"
-        app:layout_constraintTop_toBottomOf="@id/tv_kir"
+        app:layout_constraintTop_toBottomOf="@id/tv_story_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/second_option"

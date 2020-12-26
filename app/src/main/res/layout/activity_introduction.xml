@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_story_background"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <ImageView
-        android:id="@+id/im_kir"
+        android:id="@+id/iv_story_kir"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scaleType="fitStart"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_kir"
+        android:id="@+id/tv_story_title"
         style="@style/darkText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,25 +56,25 @@
         android:layout_marginTop="24dp"
         android:paddingBottom="16dp"
         android:paddingTop="24dp"
-        android:paddingLeft="16dp"
-        android:background="@color/dark"
-        android:hint="Введите свое имя..."
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@color/gray"
+        android:hint="@string/intro_et_hint"
         android:lines="1"
         android:textSize="18sp"
         android:textColorHint="@color/hint_black"
         android:textColor="@color/black"
-        android:backgroundTint="@color/gray"
-        app:layout_constraintBottom_toTopOf="@id/tv_name"
+        app:layout_constraintBottom_toTopOf="@id/tv_intro_continue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_kir" />
+        app:layout_constraintTop_toBottomOf="@id/tv_story_title" />
 
     <TextView
-        android:id="@+id/tv_name"
+        android:id="@+id/tv_intro_continue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/darkText"
-        android:text="Подтвердить"
+        android:text="@string/intro_continue"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

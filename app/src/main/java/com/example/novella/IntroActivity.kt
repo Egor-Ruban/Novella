@@ -13,7 +13,7 @@ class IntroActivity : AppCompatActivity() {
         binding = ActivityIntroductionBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        binding.tvName.setOnClickListener {
+        binding.tvIntroContinue.setOnClickListener {
             val intent = Intent(this, StoryActivity::class.java)
             intent.putExtra("id", 3)
             Log.d("MY_TAG", binding.etName.text.toString())

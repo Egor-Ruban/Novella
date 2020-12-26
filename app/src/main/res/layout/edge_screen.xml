@@ -16,11 +16,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_btn_start"
+        android:id="@+id/tv_continue"
         style="@style/darkText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Начать"
+        tools:text="@string/start_continue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,8 +31,8 @@
         style="@style/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Моя визуальная новелла"
-        app:layout_constraintBottom_toTopOf="@+id/tv_btn_start"
+        tools:text="@string/start_title"
+        app:layout_constraintBottom_toTopOf="@+id/tv_continue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

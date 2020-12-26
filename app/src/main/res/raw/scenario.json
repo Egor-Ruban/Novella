@@ -2,6 +2,8 @@
   {
     "id" : 3,
     "title" : "Отлично, {username}! Чем займемся?",
+    "showKir": true,
+    "background": "start_background",
     "answers" :
     [
       {
@@ -21,6 +23,7 @@
   {
     "id" : 4,
     "title" : "Может, пойдем домой?..",
+    "background": "background_4",
     "answers" :
     [
       {
@@ -36,6 +39,7 @@
   {
     "id" : 5,
     "title" : "Как уютно... Но уже темнеет.",
+    "background": "background_5",
     "answers" : [{
       "nextID" : 7,
       "text" : "Пойдем домой и посмотрим фильм"
@@ -49,6 +53,7 @@
   {
     "id" : 6,
     "title" : "Тебе грустно... Пойдем домой?",
+    "background": "background_6",
     "answers" : [{
       "nextID" : 7,
       "text" : "Может, посмотрим фильм?"
@@ -62,6 +67,7 @@
   {
     "id" : 7,
     "title" : "Как тебе фильм?",
+    "background": "background_7_9_10",
     "answers" : [{
       "nextID" : 9,
       "text" : "Мне понравился!"
@@ -75,6 +81,7 @@
   {
     "id" : 8,
     "title" : "Получается очень красиво!",
+    "background": "background_8",
     "answers" : [{
       "nextID" : 7,
       "text" : "Да! Может, посмотрим фильм?"
@@ -88,6 +95,7 @@
   {
     "id" : 9,
     "title" : "Отлично! А теперь пора спать...",
+    "background": "background_7_9_10",
     "answers" : [{
       "nextID" : 14,
       "text" : "Да, уже поздно..."
@@ -96,6 +104,7 @@
   {
     "id" : 10,
     "title" : "Жаль... Тогда пойдем спать?",
+    "background": "background_7_9_10",
     "answers" : [{
       "nextID" : 14,
       "text" : "Да, уже поздно..."
@@ -104,6 +113,7 @@
   {
     "id" : 11,
     "title" : "Мне нравится твой костюм.",
+    "background": "background_11_12_13",
     "answers" : [{
       "nextID" : 12,
       "text" : "Твой тоже очень красивый!"
@@ -117,6 +127,7 @@
   {
     "id" : 12,
     "title" : "Спасибо! Ну, пойдем спать?",
+    "background": "background_11_12_13",
     "answers" : [{
       "nextID" : 14,
       "text" : "Да, уже поздно..."
@@ -125,6 +136,7 @@
   {
     "id" : 13,
     "title" : "Ничего, я не в обиде. Пойдем спать?",
+    "background": "background_11_12_13",
     "answers" : [{
       "nextID" : 14,
       "text" : "Да, уже поздно..."

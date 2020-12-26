@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.novella.databinding.ActivityStoryBinding
 import org.json.JSONArray
+import org.json.JSONException
 import org.json.JSONObject
 
 private lateinit var binding : ActivityStoryBinding
@@ -22,7 +23,7 @@ class StoryActivity : AppCompatActivity() {
         updateLayout(currentStepJSON, username)
     }
 
-    private fun getCurrentStepInfo(currentID : Int) : JSONObject{
+    private fun getCurrentStepInfo(currentID: Int) : JSONObject{
         val jsonStr = resources.openRawResource(R.raw.scenario)
             .bufferedReader().use { it.readText() }
         val jsonArr = JSONArray(jsonStr)
@@ -36,15 +37,27 @@ class StoryActivity : AppCompatActivity() {
         return jsonObject
     }
 
-    private fun updateLayout(currentStepJSON : JSONObject, username : String){
-        binding.tvKir.text = currentStepJSON.getString("title")
+    private fun updateLayout(currentStepJSON: JSONObject, username: String){
+        try {
+            val b = currentStepJSON.getBoolean("showKir")
+            if(b){
+                binding.ivStoryKir.visibility = View.VISIBLE
+            }
+        } catch (e: JSONException){ //проще было во всём json`е это поле добавить
+        }
+        val pic = currentStepJSON.getString("background")
+        val context = binding.ivStoryBackground.context
+        val id = context.resources
+            .getIdentifier(pic, "drawable", context.packageName)
+        binding.ivStoryBackground.setImageDrawable(getDrawable(id))
+        binding.tvStoryTitle.text = currentStepJSON.getString("title")
             .replace("{username}", username)
         val jsonAnswers = currentStepJSON.getJSONArray("answers")
         val howMuchAnswers = jsonAnswers.length()
         val choices = arrayOf(binding.secondOption, binding.thirdOption, binding.firstOption)
         for(i in choices.indices){
             if(howMuchAnswers > i){
-                with(choices[i]) {//todo добавить обновление картинок
+                with(choices[i]) {
                     val jsonAnswer = jsonAnswers.getJSONObject(i)
                     visibility = View.VISIBLE
                     text = jsonAnswer.getString("text")
