@@ -43,41 +43,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text= "@string/meet_kir"
-        android:textSize="18sp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline" />
 
-    <EditText
-        android:id="@+id/et_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:paddingBottom="16dp"
-        android:paddingTop="24dp"
-        android:paddingLeft="16dp"
-        android:background="@color/dark"
-        android:hint="Введите свое имя..."
-        android:textSize="18sp"
-        android:textColorHint="@color/hint_black"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/gray"
-        app:layout_constraintBottom_toTopOf="@id/tv_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_kir" />
-
     <TextView
-        android:id="@+id/tv_name"
+        android:id="@+id/first_option"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/darkText"
-        android:text="Подтвердить"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/lightText"
+        android:text="fsdfds"
+        app:layout_constraintTop_toBottomOf="@id/tv_kir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_name" />
+        app:layout_constraintBottom_toTopOf="@id/second_option"
+        />
+    <TextView
+        android:id="@+id/second_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/lightText"
+        android:text="fsdfds"
+        app:layout_constraintTop_toBottomOf="@id/first_option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/third_option"
+        />
+    <TextView
+        android:id="@+id/third_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/lightText"
+        android:text="fsdfds"
+        app:layout_constraintTop_toBottomOf="@id/second_option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

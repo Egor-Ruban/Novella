@@ -8,9 +8,16 @@
 
     <style name="lightText" parent="text">
         <item name="android:background">@color/light</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="title" parent="text">
+        <item name="android:background">@color/light</item>
+        <item name="android:textSize">36sp</item>
     </style>
 
     <style name="darkText" parent="text">
+        <item name="android:textSize">20sp</item>
         <item name="android:background">@color/dark</item>
     </style>
 </resources>

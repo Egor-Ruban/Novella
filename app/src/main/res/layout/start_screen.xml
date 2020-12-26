@@ -21,7 +21,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Начать"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,11 +28,10 @@
 
     <TextView
         android:id="@+id/tv_title"
-        style="@style/lightText"
+        style="@style/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Моя визуальная новелла"
-        android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_btn_start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
