@@ -59,6 +59,7 @@
         android:paddingLeft="16dp"
         android:background="@color/dark"
         android:hint="Введите свое имя..."
+        android:lines="1"
         android:textSize="18sp"
         android:textColorHint="@color/hint_black"
         android:textColor="@color/black"

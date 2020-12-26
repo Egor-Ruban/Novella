@@ -2,6 +2,7 @@ package com.example.novella
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.novella.databinding.ActivityIntroductionBinding
 
@@ -15,6 +16,8 @@ class IntroActivity : AppCompatActivity() {
         binding.tvName.setOnClickListener {
             val intent = Intent(this, StoryActivity::class.java)
             intent.putExtra("id", 3)
+            Log.d("MY_TAG", binding.etName.text.toString())
+            intent.putExtra("username", binding.etName.text.toString())
             startActivity(intent)
             finish()
         }

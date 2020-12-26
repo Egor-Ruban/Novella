@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.novella.databinding.ActivityStoryBinding
 import org.json.JSONArray
 
-
 private lateinit var binding : ActivityStoryBinding
 class StoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +15,7 @@ class StoryActivity : AppCompatActivity() {
         binding = ActivityStoryBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
+        val username = intent.getStringExtra("username") ?: "missed"
         //
         //reading whole scenario from from json file
         //
@@ -31,36 +30,23 @@ class StoryActivity : AppCompatActivity() {
                 break
             }
         }
-        Log.d("MY_TAG", jsonObject.getString("title"))
-        binding.tvKir.text = jsonObject.getString("title")
+        binding.tvKir.text = jsonObject.getString("title").replace("{username}",username)
         val jsonAnswers = jsonObject.getJSONArray("answers")
         val howMuchAnswers = jsonAnswers.length()
-        binding.secondOption.visibility = View.VISIBLE
-        binding.secondOption.text = jsonAnswers.getJSONObject(0).getString("text")
-        binding.secondOption.setOnClickListener {
-            val intent = Intent(this, StoryActivity::class.java)
-            intent.putExtra("id", jsonAnswers.getJSONObject(0).getInt("nextID"))
-            startActivity(intent)
-            finish()
-        }
-        if(howMuchAnswers > 1){
-            binding.thirdOption.visibility = View.VISIBLE
-            binding.thirdOption.text = jsonAnswers.getJSONObject(1).getString("text")
-            binding.thirdOption.setOnClickListener {
-                val intent = Intent(this, StoryActivity::class.java)
-                intent.putExtra("id", jsonAnswers.getJSONObject(1).getInt("nextID"))
-                startActivity(intent)
-                finish()
-            }
-        }
-        if(howMuchAnswers > 2){
-            binding.firstOption.visibility = View.VISIBLE
-            binding.firstOption.text = jsonAnswers.getJSONObject(2).getString("text")
-            binding.firstOption.setOnClickListener {
-                val intent = Intent(this, StoryActivity::class.java)
-                intent.putExtra("id", jsonAnswers.getJSONObject(2).getInt("nextID"))
-                startActivity(intent)
-                finish()
+        val choices = arrayOf(binding.secondOption, binding.thirdOption, binding.firstOption)
+        for(i in choices.indices){
+            if(howMuchAnswers > i){
+                with(choices[i]) {
+                    val jsonAnswer = jsonAnswers.getJSONObject(i)
+                    visibility = View.VISIBLE
+                    text = jsonAnswer.getString("text")
+                    setOnClickListener {
+                        val intent = Intent(baseContext, StoryActivity::class.java)
+                        intent.putExtra("id", jsonAnswer.getInt("nextID"))
+                        startActivity(intent)
+                        finish()
+                    }
+                }
             }
         }
         Log.d("MY_TAG", "${jsonAnswers.length()}")
