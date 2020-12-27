@@ -2,7 +2,6 @@ package com.example.novella
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.novella.databinding.ActivityIntroductionBinding
@@ -15,16 +14,18 @@ class IntroActivity : AppCompatActivity() {
         binding = ActivityIntroductionBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        binding.tvIntroContinue.setOnClickListener { //todo поменять ключи на константу
+        binding.tvIntroContinue.setOnClickListener {
             val name = binding.etName.text.toString()
             if(name == ""){
-                Toast.makeText(this,"you should write your name", Toast.LENGTH_SHORT)
+                Toast.makeText(
+                        this,
+                        getString(R.string.empty_name_entered),
+                        Toast.LENGTH_SHORT)
                         .show()
             } else {
                 val intent = Intent(this, StoryActivity::class.java)
-                intent.putExtra("id", 3)
-                Log.d("MY_TAG", binding.etName.text.toString())
-                intent.putExtra("username", name)
+                intent.putExtra(NovellaConst.CTX_VALUE_ID, 3)
+                intent.putExtra(NovellaConst.CTX_VALUE_USERNAME, name)
                 startActivity(intent)
                 finish()
             }

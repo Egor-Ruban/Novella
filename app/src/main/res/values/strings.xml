@@ -8,6 +8,5 @@
     <string name="intro_et_hint">Введите свое имя…</string>
     <string name="intro_continue">Подтвердить</string>
     <string name="value_missed">Value Missed</string>
-    <string name="context_value_id">id</string> <!-- чую не тут их надо хранить-->
-    <string name="context_value_username">username</string> <!-- чую не тут их надо хранить-->
+    <string name="empty_name_entered">you should write your name</string>
 </resources>
